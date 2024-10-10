@@ -18,7 +18,11 @@ export default function NavigationMenu() {
   const menuItems = ["Projects", "Blog", "Meet the Team", "Profile"];
 
   return (
-    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar
+      isBlurred={false}
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -36,7 +40,7 @@ export default function NavigationMenu() {
           <p className="font-bold text-inherit">Robotics.PEC</p>
         </NavbarBrand>
         <NavbarItem>
-          <Link color="foreground" href="#">
+          <Link color="primary" href="#">
             projects
           </Link>
         </NavbarItem>
